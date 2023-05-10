@@ -113,32 +113,7 @@ export default {
   },
   watch: {
     /* wwEditor:start */
-    isPressed: {
-      immediate: true,
-      handler(value) {
-        if (value) {
-          this.$emit("add-state", "Pressed");
-        } else {
-          this.$emit("remove-state", "Pressed");
-        }
-        this.$nextTick(() => {
-          this.handleObserver();
-        });
-      },
-    },
-    isFocused: {
-      immediate: true,
-      handler(value) {
-        if (value) {
-          this.$emit("add-state", "Focus");
-        } else {
-          this.$emit("remove-state", "Focus");
-        }
-        this.$nextTick(() => {
-          this.handleObserver();
-        });
-      },
-    },
+
     "content.hasRightIcon": {
       async handler(hasRightIcon) {
         if (this.wwEditorState.isACopy) {
@@ -176,6 +151,32 @@ export default {
       },
     },
     /* wwEditor:end */
+    isPressed: {
+      immediate: true,
+      handler(value) {
+        if (value) {
+          this.$emit("add-state", "Pressed");
+        } else {
+          this.$emit("remove-state", "Pressed");
+        }
+        this.$nextTick(() => {
+          this.handleObserver();
+        });
+      },
+    },
+    isFocused: {
+      immediate: true,
+      handler(value) {
+        if (value) {
+          this.$emit("add-state", "Focus");
+        } else {
+          this.$emit("remove-state", "Focus");
+        }
+        this.$nextTick(() => {
+          this.handleObserver();
+        });
+      },
+    },
     "content.disabled": {
       immediate: true,
       handler(value) {

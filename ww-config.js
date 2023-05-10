@@ -107,27 +107,6 @@ export default {
       states: true,
       defaultValue: "#000000",
     },
-    backgroundColor: {
-      label: {
-        en: "Text Background",
-        fr: "Background du Texte",
-      },
-      type: "Color",
-      options: {
-        nullable: true,
-      },
-      bindable: true,
-      responsive: true,
-      states: true,
-      /* wwEditor:start */
-      bindingValidation: {
-        cssSupports: "color",
-        type: "string",
-        tooltip:
-          'A string that represents a color code: `"rebeccapurple" | "#00ff00" | "rgb(214, 122, 127)"`',
-      },
-      /* wwEditor:end */
-    },
     buttonType: {
       label: {
         en: "Type",
